@@ -1,0 +1,10 @@
+[default]
+
+[development]
+ENV_STATUS='On development'
+
+[testing]
+ENV_STATUS='On testing'
+
+[production]
+ENV_STATUS='On production'
