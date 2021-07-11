@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from dynaconf import FlaskDynaconf
 
 app_name = 'Weather Buddy API'
@@ -13,6 +14,7 @@ def create_app(**config):
     def index():
         return app_name
 
-    # TODO: Apply CORS
+    CORS(app)
+
 
     return app
