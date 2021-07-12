@@ -23,10 +23,10 @@ def test_get_weather_by_city_success(client, city_name):
     url = f'/weather/{city_name}'
     response = client.get(url)
     assert response.status_code == 200
-    assert response.json.get('name') is city_name
+    assert response.json.get('name') == city_name
 
 
-@pytest.mark.parametrize('city_name', ['San Paul'])
+@pytest.mark.parametrize('city_name', ['-'])
 def test_get_weather_by_city_not_found(client, city_name):
     url = f'/weather/{city_name}'
     response = client.get(url)
