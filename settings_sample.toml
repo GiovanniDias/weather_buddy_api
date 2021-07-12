@@ -1,4 +1,6 @@
 [default]
+OPEN_WEATHER_API=""
+API_KEY="'"
 
 [development]
 ENV_STATUS='On development'
