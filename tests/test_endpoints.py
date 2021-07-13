@@ -12,12 +12,6 @@ def test_get_weather_cached_list_success(client, max_number):
     assert isinstance(response.json, list)
 
 
-def test_get_weather_cached_list_not_found(client):
-    url = '/weather'
-    response = client.get(url)
-    assert response.status_code == 404
-
-
 @pytest.mark.parametrize('city_name', ['São Paulo'])
 def test_get_weather_by_city_success(client, city_name):
     url = f'/weather/{city_name}'
