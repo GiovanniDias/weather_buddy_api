@@ -27,6 +27,7 @@ jobs:
         cp settings_sample.toml settings.toml
         # set env vars
         export FLASK_APP=app:create_app
+        export API_KEY=${{ secrets.API_KEY }}
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
