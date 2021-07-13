@@ -1,6 +1,7 @@
 [default]
-OPEN_WEATHER_API=""
-API_KEY="'"
+EXTERNAL_API_URL=""
+API_KEY=""
+APP_NAME="Weather Buddy API"
 
 [development]
 ENV_STATUS='On development'
