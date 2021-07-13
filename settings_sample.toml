@@ -2,6 +2,7 @@
 EXTERNAL_API_URL="http://api.openweathermap.org/data/2.5/weather"
 API_KEY=""
 APP_NAME="Weather Buddy API"
+CACHE_TYPE="simple"
 
 [development]
 ENV_STATUS='On development'
