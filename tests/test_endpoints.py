@@ -1,6 +1,9 @@
 import pytest
-# from app.api import get_weather, get_city_weather
+from werkzeug.exceptions import InternalServerError
 
+def test_api_is_reachable(app, client):
+    response = client.get('/')
+    assert response.status_code == 200
 
 @pytest.mark.parametrize('max_number', [None,0,1,10])
 def test_get_weather_cached_list_success(client, max_number):
@@ -10,12 +13,6 @@ def test_get_weather_cached_list_success(client, max_number):
     response = client.get(url)
     assert response.status_code == 200
     assert isinstance(response.json, list)
-
-
-def test_get_weather_cached_list_not_found(client):
-    url = '/weather'
-    response = client.get(url)
-    assert response.status_code == 404
 
 
 @pytest.mark.parametrize('city_name', ['São Paulo'])
