@@ -3,14 +3,12 @@ FROM python:3.9.6-alpine3.14
 # Update native packages
 RUN apk update
 
-# Install dev-tools dependencies
-# RUN apk add g++ libxml2 unixodbc-dev curl gnupg libressl-dev musl-dev python3-dev
-
 # Set environment
 WORKDIR /usr/src/app
 RUN python -m venv venv
 ENV PATH /usr/src/app/venv/bin:$PATH
 RUN source venv/bin/activate
+COPY settings_sample.toml ./settings.toml
 
 # Get and install dependencies
 COPY requirements.txt ./

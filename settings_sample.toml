@@ -2,7 +2,7 @@
 DEBUG="True"
 TESTING="False"
 EXTERNAL_API_URL="http://api.openweathermap.org/data/2.5/weather"
-API_KEY=""
+API_KEY="@format {env[API_KEY]}"
 APP_NAME="Weather Buddy API"
 CACHE_TYPE="simple"
 MAX_CACHE_ENTRIES=5
