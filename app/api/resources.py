@@ -7,7 +7,8 @@ def init_app(app):
     def index():
         return app.config.APP_NAME
 
-    @app.route('/weather/<city_name>', methods=['GET'])
+    @app.get('/weather/<city_name>')
+    @app.cache.cached()
     def get_weather_by_city(city_name: str) -> Response:
         return controller.get_weather_by_city(city_name)
 
