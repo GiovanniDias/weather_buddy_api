@@ -1,18 +1,20 @@
 import pytest
-from werkzeug.exceptions import InternalServerError
+from app.api.services import save_to_cache
 
-def test_api_is_reachable(app, client):
+def test_api_is_reachable(client):
     response = client.get('/')
     assert response.status_code == 200
 
 @pytest.mark.parametrize('max_number', [None,0,1,10])
-def test_get_weather_cached_list_success(client, max_number):
+def test_get_weather_cached_list_success(client, data, max_number):
+    save_to_cache(data)
+    
     url = '/weather'
     if max_number:
         url += f'?max={max_number}'
     response = client.get(url)
     assert response.status_code == 200
-    assert isinstance(response.json, list)
+    assert isinstance(response.json, dict)
 
 
 @pytest.mark.parametrize('city_name', ['São Paulo'])
