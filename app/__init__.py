@@ -3,7 +3,7 @@ from .api import resources
 from .extensions import configuration, cors, cache
 
 
-def create_app(*argv, **kwargs):
+def create_app(*args, **kwargs):
     app = Flask(__name__)
     configuration.init_app(app, **kwargs)
     cache.init_app(app)
