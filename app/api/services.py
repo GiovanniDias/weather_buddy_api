@@ -6,7 +6,12 @@ from app.utils import get_api_url
 
 def get_weather_by_city_service(city_name: str) -> dict:
     API_URL = get_api_url(param=city_name)
-    data = requests.get(API_URL).json()
+    data = requests.get(
+        url=API_URL,
+        headers={
+            'Content-Type': 'application/json',
+        }
+    ).json()
     return data
 
 
