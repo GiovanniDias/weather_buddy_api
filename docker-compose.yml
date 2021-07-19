@@ -3,12 +3,8 @@ services:
   app:
     container_name: weather-buddy-api
     restart: on-failure:10
-    environment:
-      - FLASK_ENV=production
-      - ENV_FOR_DYNACONF=production
-      - API_KEY=a881b20369559e72c6b9994b38517638
     build:
       context: .
       dockerfile: Dockerfile
     ports: 
-      - 5000:5000
+      - 5005:5000

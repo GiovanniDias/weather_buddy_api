@@ -4,7 +4,6 @@
 htmlcov/
 venv/
 .coverage
-.env
 .gitignore
 settings.toml
 docker-compose.*
