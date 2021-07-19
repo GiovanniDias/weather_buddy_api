@@ -20,6 +20,7 @@ API to retrieve basic information about cities weather from [Open Weather Map](h
     * [Running Application](#running-app)
         * [Using Flask](#flask-approach)
         * [Using Docker](#docker-approach)
+* [Endpoints](#endpoints)
 * [Tests](#tests)
 
 <h3 align="center">🚧 Building... 🚧</h3>
@@ -87,6 +88,8 @@ With venv activated:
 
     $ flask run -h 0.0.0.0
 
+http://localhost:5000 to access it.
+
 *This host configuration is needed to allow its endpoints to be reached for other applications in localhost context.*
 
 **<h4 id="docker-approach">Using Docker</h4>**
@@ -98,6 +101,12 @@ For running this application with Docker, use:
     $ docker compose up --build -d
 
 depending on Docker version your local machine is using.
+
+<h2 id="endpoints">Endpoints</h2>
+
+- ```'/weather/<city_name>/```: Retrieve weather info for the informed city.
+
+- ```'/weather?max={max_number}```: Retrieve the last maximum 5 successful searches in the last 5 minutes.
 
 <h2 id="tests">Testing application</h2>
 
