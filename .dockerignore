@@ -1,0 +1,10 @@
+.github
+.pytest*
+.vscode
+htmlcov/
+venv/
+.coverage
+.gitignore
+settings.toml
+docker-compose.*
+Dockerfile

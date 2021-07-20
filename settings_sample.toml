@@ -1,0 +1,19 @@
+[default]
+DEBUG="True"
+TESTING="False"
+EXTERNAL_API_URL="http://api.openweathermap.org/data/2.5/weather"
+API_KEY="@format {env[API_KEY]}"
+APP_NAME="Weather Buddy API"
+CACHE_TYPE="simple"
+MAX_CACHE_ENTRIES=5
+
+[development]
+ENV_STATUS='On development'
+
+[testing]
+ENV_STATUS="On testing"
+TESTING="True"
+
+[production]
+ENV_STATUS="On production"
+DEBUG="False"

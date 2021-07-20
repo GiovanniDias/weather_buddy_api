@@ -1,0 +1,10 @@
+version: "3.5"
+services: 
+  app:
+    container_name: weather-buddy-api
+    restart: on-failure:10
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 5005:5000
