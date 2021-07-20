@@ -34,7 +34,6 @@ API to retrieve basic information about cities weather from [Open Weather Map](h
 - [x] Endpoint integration tests
 - [x] Dockerize application
 - [ ] Document endpoints with OpenAPI/Swagger
-- [ ] Add OpenAPI/Swagger configuration
 - [ ] Deploy on Heroku or AWS EBS
 
 <h2 id="how-to-use">How to use</h2>
