@@ -50,7 +50,7 @@ You may need to have installed:
 [Download Zip](https://github.com/GiovanniDias/weather_buddy_api/archive/refs/heads/master.zip) or use git to clone it using the command
 
     # https
-    $ git clone https://github.com/GiovanniDias/weather_buddy_api/archive/refs/heads/master.zip
+    $ git clone https://github.com/GiovanniDias/weather_buddy_api.git
 
     # ssh
     $ git clone git@github.com:GiovanniDias/weather_buddy_api.git
